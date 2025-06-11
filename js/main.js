@@ -16,7 +16,7 @@ const signosArray = [
   { nombre: "Libra", img: "../media/Libra.png" },
   { nombre: "Escorpio", img: "../media/Escorpio.png" },
   { nombre: "Sagitario", img: "../media/Sagitario.png" },
-  { nombre: "Capricornio", img: "../media/Capricornio.png" },
+  { nombre: "Capricornio", img: "media/Capricornio.png" },
   { nombre: "Acuario", img: "../media/Acuario.png" },
   { nombre: "Piscis", img: "../media/Pisis.png" }
 ]
