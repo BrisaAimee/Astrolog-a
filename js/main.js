@@ -1,12 +1,11 @@
-// Primero armo el diccionario para traducir signos al inglés (porque la API los quiere así)
+// Primero armo el diccionario para traducir signos al inglés
 const traduccion = {
   Aries: "Aries", Tauro: "Taurus", Geminis: "Gemini", Cancer: "Cancer",
   Leo: "Leo", Virgo: "Virgo", Libra: "Libra", Escorpio: "Scorpio",
   Sagitario: "Sagittarius", Capricornio: "Capricorn", Acuario: "Aquarius", Piscis: "Pisces"
 }
 
-// Array con los signos y sus imágenes, lo tuve que hacer a mano porque la API no me da imágenes
-const signosArray = [
+const signosArray = [ // Array con los signos y sus imágenes, lo tuve que hacer a mano porque la API no me da imágenes
   { nombre: "Aries", img: "media/aries.png" },
   { nombre: "Tauro", img: "media/tauro.png" },
   { nombre: "Geminis", img: "media/geminis.png" },
@@ -23,13 +22,12 @@ const signosArray = [
 
 // Esta es la función para hacer la grilla de imágenes (cada imagen te lleva al horóscopo)
 function generarGrilla() {
-  let grilla = document.getElementById("grilla")
-  if (!grilla) return // por si lo llamo desde otra página sin querer
+  let grilla = document.getElementById("grilla") // selecciono el contenedor de la grilla
 
-  for (let i = 0; i < signosArray.length; i++) {
+  for (let i = 0; i < signosArray.length; i++) { // recorro el array de signos
     let signo = signosArray[i]
-    let img = document.createElement("img")
-    img.src = signo.img
+    let img = document.createElement("img") // creo un elemento img
+    img.src = signo.img 
     img.alt = signo.nombre
 
     // cuando hacés clic te lleva al post.html con el signo ya en la URL
@@ -38,7 +36,7 @@ function generarGrilla() {
       window.location.href = `../pages/post.html?sign=${enIngles}`
     })
 
-    grilla.appendChild(img)
+    grilla.appendChild(img) // agrego la imagen al contenedor de la grilla
   }
 }
 
@@ -51,18 +49,18 @@ function redireccionarConFecha() {
     return
   }
 
-  let partes = fecha.split("-") // separo año, mes, día
+  let partes = fecha.split("-") // separo año, mes, día usando el guion como separador
   let mes = parseInt(partes[1])
-  let dia = parseInt(partes[2])
+  let dia = parseInt(partes[2]) // no nos importa el año, solo mes y día
 
-  let signo = calcularSigno(mes, dia) // uso mi función de abajo
-
+  let signo = calcularSigno(mes, dia)
   window.location.href = `../pages/post.html?sign=${signo}` // chau, te mando a post
 }
 
 // Esto es lo que calcula el signo, según el mes y día. Lo chequeé y está bien.
 function calcularSigno(m, d) {
-  let z = "Capricornio" // por default
+  let z = "Capricornio" // por default ya que es el más dificil de calcular (del 22 de diciembre al 19 de enero)
+  // m = mes, d = día, z = signo en español
   if (m == 1 && d >= 20 || m == 2 && d <= 18) z = "Acuario"
   else if (m == 2 && d >= 19 || m == 3 && d <= 20) z = "Piscis"
   else if (m == 3 && d >= 21 || m == 4 && d <= 19) z = "Aries"
@@ -80,3 +78,15 @@ function calcularSigno(m, d) {
 
 // apenas se abre la página, armo la grilla
 generarGrilla()
+
+const cursor = document.getElementById('cursor'); // Obtengo el elemento del cursor personalizado
+document.body.style.cursor = 'none'; // Oculta el cursor normal
+
+window.addEventListener('mousemove', (e) => {
+  cursor.style.left = `${e.clientX - 20}px`;
+  cursor.style.top = `${e.clientY - 20}px`;
+  cursor.style.transform = 'scale(1.3)';
+  setTimeout(() => {
+    cursor.style.transform = 'scale(1)';
+  }, 100);
+});
