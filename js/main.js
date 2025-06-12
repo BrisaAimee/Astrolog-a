@@ -63,7 +63,6 @@ function redireccionarConFecha() {
 // Esto es lo que calcula el signo, según el mes y día. Lo chequeé y está bien.
 function calcularSigno(m, d) {
   let z = "Capricornio" // por default
-
   if (m == 1 && d >= 20 || m == 2 && d <= 18) z = "Acuario"
   else if (m == 2 && d >= 19 || m == 3 && d <= 20) z = "Piscis"
   else if (m == 3 && d >= 21 || m == 4 && d <= 19) z = "Aries"
