@@ -7,7 +7,7 @@ const traduccion = {
 
 // Array con los signos y sus imágenes, lo tuve que hacer a mano porque la API no me da imágenes
 const signosArray = [
-  { nombre: "Aries", img: "../media/aries.png" },
+  { nombre: "Aries", img: "media/aries.png" },
   { nombre: "Tauro", img: "media/tauro.png" },
   { nombre: "Geminis", img: "media/geminis.png" },
   { nombre: "Cancer", img: "media/cancer.png" },
@@ -35,7 +35,7 @@ function generarGrilla() {
     // cuando hacés clic te lleva al post.html con el signo ya en la URL
     img.addEventListener("click", () => {
       let enIngles = traduccion[signo.nombre]
-      window.location.href = `post.html?sign=${enIngles}`
+      window.location.href = `../pages/post.html?sign=${enIngles}`
     })
 
     grilla.appendChild(img)
@@ -57,7 +57,7 @@ function redireccionarConFecha() {
 
   let signo = calcularSigno(mes, dia) // uso mi función de abajo
 
-  window.location.href = `post.html?sign=${signo}` // chau, te mando a post
+  window.location.href = `../pages/post.html?sign=${signo}` // chau, te mando a post
 }
 
 // Esto es lo que calcula el signo, según el mes y día. Lo chequeé y está bien.
