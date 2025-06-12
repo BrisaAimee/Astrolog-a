@@ -7,18 +7,18 @@ const traduccion = {
 
 // Array con los signos y sus imágenes, lo tuve que hacer a mano porque la API no me da imágenes
 const signosArray = [
-  { nombre: "Aries", img: "../media/aries.png" },
-  { nombre: "Tauro", img: "../media/tauro.png" },
-  { nombre: "Geminis", img: "../media/geminis.png" },
-  { nombre: "Cancer", img: "../media/cancer.png" },
-  { nombre: "Leo", img: "../media/leo.png" },
-  { nombre: "Virgo", img: "../media/virgo.png" },
-  { nombre: "Libra", img: "../media/libra.png" },
-  { nombre: "Escorpio", img: "../media/escorpio.png" },
-  { nombre: "Sagitario", img: "../media/sagitario.png" },
+  { nombre: "Aries", img: "media/aries.png" },
+  { nombre: "Tauro", img: "media/tauro.png" },
+  { nombre: "Geminis", img: "media/geminis.png" },
+  { nombre: "Cancer", img: "media/cancer.png" },
+  { nombre: "Leo", img: "media/leo.png" },
+  { nombre: "Virgo", img: "media/virgo.png" },
+  { nombre: "Libra", img: "media/libra.png" },
+  { nombre: "Escorpio", img: "media/escorpio.png" },
+  { nombre: "Sagitario", img: "media/sagitario.png" },
   { nombre: "Capricornio", img: "media/capricornio.png" },
-  { nombre: "Acuario", img: "../media/acuario.png" },
-  { nombre: "Piscis", img: "../media/pisis.png" }
+  { nombre: "Acuario", img: "media/acuario.png" },
+  { nombre: "Piscis", img: "media/pisis.png" }
 ]
 
 // Esta es la función para hacer la grilla de imágenes (cada imagen te lleva al horóscopo)
