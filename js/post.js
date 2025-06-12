@@ -10,7 +10,7 @@ const signosArray = [ //Acá tmb tengo que poner los signos y sus imágenes
   { nombre: "Sagitario", img: "media/sagitario.png" },
   { nombre: "Capricornio", img: "media/capricornio.png" },
   { nombre: "Acuario", img: "media/acuario.png" },
-  { nombre: "Piscis", img: "media/pisis.png" }
+  { nombre: "Piscis", img: "media/piscis.png" }
 ]
 
 const traduccion = { // Traducción de los signos del zodiaco al español porque las imagenes están en español
