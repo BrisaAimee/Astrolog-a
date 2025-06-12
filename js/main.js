@@ -7,7 +7,7 @@ const traduccion = {
 
 // Array con los signos y sus imágenes, lo tuve que hacer a mano porque la API no me da imágenes
 const signosArray = [
-  { nombre: "Aries", img: "media/aries.png" },
+  { nombre: "Aries", img: "../media/aries.png" },
   { nombre: "Tauro", img: "media/tauro.png" },
   { nombre: "Geminis", img: "media/geminis.png" },
   { nombre: "Cancer", img: "media/cancer.png" },
